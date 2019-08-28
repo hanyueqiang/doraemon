@@ -1,7 +1,7 @@
 import { PureComponent } from 'react';
 import { connect } from 'dva';
 import router from 'umi/router';
-import { Layout, Menu, Icon } from 'antd';
+import { Layout, Icon } from 'antd';
 import styles from './index.less';
 import Logo from './logo';
 import FooterView from './Footer';
@@ -20,6 +20,7 @@ class Platform extends PureComponent {
             theme: 'light',
             // 菜单主题
             menuTheme: 'dark',
+            defaultKey: 'table'
         };
     };
 
@@ -59,15 +60,17 @@ class Platform extends PureComponent {
             });
         }
     }
+    
 
     render() {
         const { location } = this.props;
+        const { defaultKey } = this.state;
         return (
             <Layout className={styles.wrap}>
                 <Sider trigger={null} collapsible collapsed={this.state.collapsed} >
                     {/* LOGO */}
                     <Logo collapsed={this.state.collapsed} />
-                    <MainMenu location={location} />
+                    <MainMenu location={location} defaultKey={defaultKey} />
                 </Sider>
                 <Layout className={styles.container}>
                     <Header style={{ background: '#fff', padding: 0 }} className={styles.contentHeader}>
@@ -89,7 +92,7 @@ class Platform extends PureComponent {
                             minHeight: 280,
                         }}
                     >
-                        Content
+                        {this.props.children}
               </Content>
                 <FooterView />
                 </Layout>

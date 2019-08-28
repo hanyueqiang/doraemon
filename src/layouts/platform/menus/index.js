@@ -49,7 +49,7 @@ class MainMenu extends PureComponent {
     const { location, defaultKey, menuTheme, menusData, mode } = this.props;
     const { pathname } = location;
     const menus = this.renderMenu(menusData);
-    const key = queryKeysByPath(pathname, menusData);
+    const { key } = queryKeysByPath(pathname, menusData);
     return (
       <Menu
         selectedKeys={[key || defaultKey]}
