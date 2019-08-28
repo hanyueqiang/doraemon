@@ -1,12 +1,17 @@
-import styles from './index.css';
+import BasicLayout from './basic';
+import PlatformLayout from './platform';
 
-function BasicLayout(props) {
-  return (
-    <div className={styles.normal}>
-      <h1 className={styles.title}>Yay! Welcome to umi!</h1>
-      {props.children}
-    </div>
-  );
+function Index(props) {
+  const { location, children } = props;
+  const { pathname } = location;
+  if (
+    pathname === '/' ||
+    pathname === '/login' ||
+    /^\/exception/.test(pathname)
+  ) {
+    return (<BasicLayout>{children}</BasicLayout>);
+  }
+  return (<PlatformLayout {...props}>{children}</PlatformLayout>);
 }
 
-export default BasicLayout;
+export default Index;
