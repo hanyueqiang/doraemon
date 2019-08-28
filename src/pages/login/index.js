@@ -18,7 +18,6 @@ class Index extends PureComponent {
     }
   }
   handleSubmit = (err, values) => {
-    debugger
     for (const name in values) {
       if (values[name] === undefined) {
         message.error('用户名或密码错误！');
