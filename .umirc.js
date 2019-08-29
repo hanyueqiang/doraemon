@@ -1,5 +1,6 @@
 
 // ref: https://umijs.org/config/
+import { resolve } from "path";
 export default {
   treeShaking: true,
   plugins: [
@@ -22,11 +23,15 @@ export default {
       },
     }],
   ],
-  // proxy: {
-  //   "/api": {
-  //     target: "",
-  //     changeOrigin: true,
-  //     pathRewrite: { "^/api": "" }
-  //   }
-  // },
+  alias: {
+    // 组件库
+    '@components': resolve(__dirname, "./src/components"),
+  },
+  proxy: {
+    "/api": {
+      target: "",
+      changeOrigin: true,
+      pathRewrite: { "^/api": "" }
+    }
+  },
 }

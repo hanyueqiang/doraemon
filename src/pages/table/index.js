@@ -10,10 +10,23 @@ import styles from './index.less';
 class Index extends Component {
 
   componentDidMount() {
-    const { dispatch } = this.props;
+    this.goFetch();
+  }
+  goFetch = () => {
+    const { dispatch, } = this.props;
     dispatch({
       type: 'table/getTableList',
       payload: {
+
+      }
+    });
+  }
+  reviewOnChange = (value) => {
+    const { dispatch,  } = this.props;
+    dispatch({
+      type: 'table/save',
+      payload: {
+        
       }
     });
   }
@@ -22,7 +35,7 @@ class Index extends Component {
     const { dataSource } = this.props;
     return (
       <div className={styles.tableSearch}>
-        <FilterOptions />
+        <FilterOptions reviewOnChange={this.reviewOnChange}/>
         <Table
           columns={columns}
           dataSource={dataSource}

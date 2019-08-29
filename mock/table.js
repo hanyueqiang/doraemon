@@ -6,20 +6,23 @@ module.exports = {
                 {
                     key: '1',
                     name: 'John Brown',
-                    age: 32,
-                    address: 'New York No. 1 Lake Park',
+                    reviewCaseStatus: 1,
+                    viciousStatus: 0,
+                    reviewCaseTime: '2019-08-29',
                 },
                 {
                     key: '2',
                     name: 'Jim Green',
-                    age: 42,
-                    address: 'London No. 1 Lake Park',
+                    reviewCaseStatus: 2,
+                    viciousStatus: 1,
+                    reviewCaseTime: '2019-08-28',
                 },
                 {
                     key: '3',
                     name: 'Joe Black',
-                    age: 32,
-                    address: 'Sidney No. 1 Lake Park',
+                    reviewCaseStatus: 3,
+                    viciousStatus: 2,
+                    reviewCaseTime: '2019-08-27',
                 }
             ],
             status: 0
