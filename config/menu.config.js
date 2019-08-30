@@ -6,21 +6,21 @@ export default [
     icon: "line-chart"
   },
   {
-    title: "数据分析",
-    key: "analyze",
-    icon: "line-chart",
+    title: "practice",
+    key: "practice",
+    icon: "usergroup-delete",
     children: [
       {
         title: "view1",
-        link: "/analyze/view1",
+        link: "/practice/view1",
         key: "view1",
-        icon: "line-chart"
+        icon: "smile"
       },
       {
         title: "view2",
-        link: "/analyze/view2",
+        link: "/practice/view2",
         key: "view2",
-        icon: "bar-chart"
+        icon: "smile"
       }
     ]
   }

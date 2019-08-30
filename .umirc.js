@@ -27,6 +27,7 @@ export default {
   alias: {
     // 组件库
     '@components': resolve(__dirname, "./src/components"),
+    '@utils': resolve(__dirname, "./src/utils"),
   },
   proxy: {
     "/api": {
