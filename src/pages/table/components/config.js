@@ -31,10 +31,10 @@ export const columns = context => ([
         align: 'center',
         render: (text, record) => (
             <span>
-                <a onClick={context.editHandle.bind(context, record)}>编辑</a>
+                <span style={{ color: '#1890ff', cursor: 'pointer' }} onClick={context.editHandle.bind(context, record)}>编辑</span>
                 <Divider type="vertical" />
                 <Popconfirm title="确定删除?" onConfirm={context.deleteHandle.bind(context, record)}>
-                    <a>删除</a>
+                    <span style={{ color: '#1890ff', cursor: 'pointer' }}>删除</span>
                 </Popconfirm>
             </span>
         ),
