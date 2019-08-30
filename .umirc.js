@@ -3,6 +3,7 @@
 import { resolve } from "path";
 export default {
   treeShaking: true,
+  hash: true,//生成hash文件名
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
     ['umi-plugin-react', {
