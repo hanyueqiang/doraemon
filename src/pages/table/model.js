@@ -4,7 +4,10 @@ import * as api from './service';
 export default {
     namespace: 'table',
     state: {
-        dataSource: []
+        dataSource: [],
+        tableSource: [],
+        review: '',
+        deleteKey: ''
     },
     effects: {
         *getTableList({ payload }, { call, put }) {
@@ -14,7 +17,8 @@ export default {
                 yield put({
                     type: 'save',
                     payload: {
-                        dataSource: data
+                        dataSource: data,
+                        tableSource: data
                     }
                 });
             }

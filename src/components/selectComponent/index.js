@@ -16,7 +16,7 @@ export default class SelectComponent extends Component {
         <Select
           style={{ width: 140, ...style }}
           onChange={this.onChange}
-          value={value || ''}
+          value={value}
         >
           <Option value={''}>全部</Option>
           {options.map((item, index) => <Option key={index} value={item.id}>{item.name}</Option>)}
