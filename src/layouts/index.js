@@ -1,5 +1,7 @@
 import BasicLayout from './basic';
 import PlatformLayout from './platform';
+import { ConfigProvider } from 'antd';
+import zhCN from 'antd/es/locale/zh_CN';
 
 function Index(props) {
   const { location, children } = props;
@@ -9,9 +11,9 @@ function Index(props) {
     pathname === '/login' ||
     /^\/exception/.test(pathname)
   ) {
-    return (<BasicLayout>{children}</BasicLayout>);
+    return (<ConfigProvider locale={zhCN}><BasicLayout>{children}</BasicLayout></ConfigProvider>);
   }
-  return (<PlatformLayout {...props}>{children}</PlatformLayout>);
+  return (<ConfigProvider locale={zhCN}><PlatformLayout {...props}>{children}</PlatformLayout></ConfigProvider>);
 }
 
 export default Index;
