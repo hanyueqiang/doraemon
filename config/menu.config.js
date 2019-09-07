@@ -11,16 +11,16 @@ export default [
     icon: "usergroup-delete",
     children: [
       {
-        title: "view1",
+        title: "基础表格",
         link: "/practice/view1",
         key: "view1",
-        icon: "smile"
+        icon: "bars"
       },
       {
-        title: "view2",
+        title: "图形分析",
         link: "/practice/view2",
         key: "view2",
-        icon: "smile"
+        icon: "bar-chart"
       }
     ]
   }
