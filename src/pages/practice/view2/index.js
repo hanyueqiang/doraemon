@@ -32,7 +32,7 @@ export default class Index extends Component {
 
   render() {
     return (
-      <div style={{width: '100%'}}>
+      <div style={{ width: '100%' }}>
         <div className={styles.Barcharts}>
           <ChartsComponent
             options={getChartsOptionsForLine(barData)}
